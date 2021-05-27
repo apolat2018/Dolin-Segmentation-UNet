@@ -42,7 +42,7 @@ def create_image(image_path,save_folder,h,w,set_name="set1"):
         
 
             ROI=img[y1:y2,x1:x2]
-            name=os.path.join(save_folder,"file"+str(j)+"_"+str(i)+".png")
+            name=os.path.join(save_folder,set_name+str(j)+"_"+str(i)+".png")
             
             ROI=cv2.cvtColor(ROI,cv2.COLOR_RGB2BGR)
             cv2.imwrite(name,ROI)
@@ -62,7 +62,7 @@ def create_image(image_path,save_folder,h,w,set_name="set1"):
     #img=cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
     #cv2.imwrite(os.path.join(save_folder,"grid.jpg"),img)
  
-#create_image("C:\\Users\\ap\\Documents\\GitHub\\geospatial_deneme\\dolins\\DATA_ORTO\\image_.png","C:\\Users\\ap\\Documents\\GitHub\\geospatial_deneme\\dolins\\DATA_ORTO\\image_320",320,320,"set1_")
+
 
 def create_mask(image_path,save_folder,h,w,set_name="set1"):
     if os.path.isdir(save_folder)==False:
@@ -95,7 +95,7 @@ def create_mask(image_path,save_folder,h,w,set_name="set1"):
         
 
             ROI=img[y1:y2,x1:x2]
-            name=os.path.join(save_folder,"file"+str(j)+"_"+str(i)+".png")
+            name=os.path.join(save_folder,set_name+str(j)+"_"+str(i)+".png")
             
             ROI=cv2.cvtColor(ROI,cv2.COLOR_RGB2BGR)
             cv2.imwrite(name,ROI)
@@ -118,4 +118,5 @@ def create_mask(image_path,save_folder,h,w,set_name="set1"):
     
 
 
-create_mask("D:/rock_segmentation/mask2.png","D:/rock_segmentation/dataset",128,128,"set1_")
+create_mask("D:\\rocksegmentation\\mask.png","D:\\rocksegmentation\\mask",128,128,"set1_")
+create_image("D:\\rocksegmentation\\image.png","D:\\rocksegmentation\\image",128,128,"set1_")
