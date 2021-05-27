@@ -99,7 +99,7 @@ def create_mask(image_path,save_folder,h,w,set_name="set1"):
             
             ROI=cv2.cvtColor(ROI,cv2.COLOR_RGB2BGR)
             cv2.imwrite(name,ROI)
-            cv2.rectangle(img,(x1,y1),(x2,y2),(0,255,0),10)
+            #cv2.rectangle(img,(x1,y1),(x2,y2),(0,255,0),10)
             x1=x1+w
             x2=x1+w
             
@@ -118,4 +118,4 @@ def create_mask(image_path,save_folder,h,w,set_name="set1"):
     
 
 
-create_mask("C:\\Users\\ap\\Documents\\GitHub\\geospatial_deneme\\dolins\\DATA_ORTO\\mask_.png","C:\\Users\\ap\\Documents\\GitHub\\geospatial_deneme\\dolins\\DATA_ORTO\\mask_320",320,320,"set1_")
+create_mask("D:/rock_segmentation/mask2.png","D:/rock_segmentation/dataset",128,128,"set1_")
